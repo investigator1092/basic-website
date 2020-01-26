@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href={{ route('home') }}>Home</a>
+                <a class="nav-link {{ Request::route()->getName() === 'home' ? 'active': '' }}" href={{ route('home') }}>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href={{ route('about') }}>About</a>
+                <a class="nav-link {{ Request::route()->getName() === 'about' ? 'active': '' }}" href={{ route('about') }}>About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href={{ route('contact') }}>Contact</a>
+                <a class="nav-link {{ Request::route()->getName() === 'contact' ? 'active': '' }}" href={{ route('contact') }}>Contact</a>
             </li>
             <li>
-                <a class="nav-link" href={{  route('get-messages')  }}>see messages</a>
+                <a class="nav-link {{ Request::route()->getName() === 'get-messages' ? 'active': '' }}" href={{  route('get-messages')  }}>see messages</a>
             </li>
         </ul>
     </div>

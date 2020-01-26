@@ -34,7 +34,7 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'You should fill the name field'
+            // 'name.required' => 'You should fill the name field'
         ];
     }
 
@@ -42,7 +42,6 @@ class ContactRequest extends FormRequest
     {
         return [
             'email' => 'email address',
-
         ];
     }
 }
